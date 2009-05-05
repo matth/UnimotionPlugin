@@ -113,9 +113,7 @@
             break;
 	}
 	
-	s = [NSString stringWithFormat: @"%s", name];
-	 
-     return s;
+	return [NSString stringWithFormat: @"%s", name];
 }
 
 @end

@@ -197,7 +197,128 @@
 	<key>Notifications</key>
 	<array/>
 	<key>OpenEditors</key>
-	<array/>
+	<array>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>B91CD3900FB0FA7000827F86</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>UnimotionPlugin.m</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>B91CD3910FB0FA7000827F86</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>UnimotionPlugin.m</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>B91CD39C0FB0FA8E00827F86</string>
+						<key>history</key>
+						<array>
+							<string>B91CD3920FB0FA7000827F86</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {750, 677}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>15 55 750 718 0 0 1280 778 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>B91CD3940FB0FA7000827F86</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>unimotion.h</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>B91CD3950FB0FA7000827F86</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>unimotion.h</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>B91CD39D0FB0FA8E00827F86</string>
+						<key>history</key>
+						<array>
+							<string>B91CD3960FB0FA7000827F86</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {750, 677}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>15 55 750 718 0 0 1280 778 </string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Content</key>
+			<dict>
+				<key>PBXProjectModuleGUID</key>
+				<string>B91CD3980FB0FA7000827F86</string>
+				<key>PBXProjectModuleLabel</key>
+				<string>unimotion.c</string>
+				<key>PBXSplitModuleInNavigatorKey</key>
+				<dict>
+					<key>Split0</key>
+					<dict>
+						<key>PBXProjectModuleGUID</key>
+						<string>B91CD3990FB0FA7000827F86</string>
+						<key>PBXProjectModuleLabel</key>
+						<string>unimotion.c</string>
+						<key>_historyCapacity</key>
+						<integer>0</integer>
+						<key>bookmark</key>
+						<string>B91CD39E0FB0FA8E00827F86</string>
+						<key>history</key>
+						<array>
+							<string>B91CD38B0FB0F65E00827F86</string>
+						</array>
+					</dict>
+					<key>SplitCount</key>
+					<string>1</string>
+				</dict>
+				<key>StatusBarVisibility</key>
+				<true/>
+			</dict>
+			<key>Geometry</key>
+			<dict>
+				<key>Frame</key>
+				<string>{{0, 20}, {750, 677}}</string>
+				<key>PBXModuleWindowStatusBarHidden2</key>
+				<false/>
+				<key>RubberWindowFrame</key>
+				<string>15 55 750 718 0 0 1280 778 </string>
+			</dict>
+		</dict>
+	</array>
 	<key>PerspectiveWidths</key>
 	<array>
 		<integer>-1</integer>
@@ -231,6 +352,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -274,7 +397,8 @@
 							<key>PBXSmartGroupTreeModuleOutlineStateSelectionKey</key>
 							<array>
 								<array>
-									<integer>0</integer>
+									<integer>12</integer>
+									<integer>11</integer>
 								</array>
 							</array>
 							<key>PBXSmartGroupTreeModuleOutlineStateVisibleRectKey</key>
@@ -342,8 +466,6 @@
 							<string>0pt</string>
 						</dict>
 						<dict>
-							<key>BecomeActive</key>
-							<true/>
 							<key>ContentConfiguration</key>
 							<dict>
 								<key>PBXProjectModuleGUID</key>
@@ -517,6 +639,9 @@
 	<key>WindowOrderList</key>
 	<array>
 		<string>B91CD3070FB0E2FC00827F86</string>
+		<string>B91CD3980FB0FA7000827F86</string>
+		<string>B91CD3940FB0FA7000827F86</string>
+		<string>B91CD3900FB0FA7000827F86</string>
 		<string>/Users/matth/Documents/unimotion_plugin/plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

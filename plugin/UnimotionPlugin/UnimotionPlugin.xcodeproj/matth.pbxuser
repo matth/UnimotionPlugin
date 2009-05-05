@@ -3,9 +3,9 @@
 	089C1669FE841209C02AAC07 /* Project object */ = {
 		activeArchitecture = i386;
 		activeBuildConfigurationName = Release;
-		activeTarget = 8D5B49AC048680CD000E48DA /* Unimotion */;
+		activeTarget = 8D5B49AC048680CD000E48DA /* UnimotionPlugin */;
 		addToTargets = (
-			8D5B49AC048680CD000E48DA /* Unimotion */,
+			8D5B49AC048680CD000E48DA /* UnimotionPlugin */,
 		);
 		codeSenseManager = B91CD2CD0FB0DF2F00827F86 /* Code sense */;
 		perUserDictionary = {
@@ -59,6 +59,15 @@
 		perUserProjectItems = {
 			B91CD3510FB0EED600827F86 = B91CD3510FB0EED600827F86 /* PBXBookmark */;
 			B91CD3560FB0EEE100827F86 = B91CD3560FB0EEE100827F86 /* PBXTextBookmark */;
+			B91CD38B0FB0F65E00827F86 /* PBXBookmark */ = B91CD38B0FB0F65E00827F86 /* PBXBookmark */;
+			B91CD3920FB0FA7000827F86 /* PBXTextBookmark */ = B91CD3920FB0FA7000827F86 /* PBXTextBookmark */;
+			B91CD3930FB0FA7000827F86 /* PBXTextBookmark */ = B91CD3930FB0FA7000827F86 /* PBXTextBookmark */;
+			B91CD3960FB0FA7000827F86 /* PBXTextBookmark */ = B91CD3960FB0FA7000827F86 /* PBXTextBookmark */;
+			B91CD3970FB0FA7000827F86 /* PBXTextBookmark */ = B91CD3970FB0FA7000827F86 /* PBXTextBookmark */;
+			B91CD39A0FB0FA7000827F86 /* PBXTextBookmark */ = B91CD39A0FB0FA7000827F86 /* PBXTextBookmark */;
+			B91CD39C0FB0FA8E00827F86 /* PBXTextBookmark */ = B91CD39C0FB0FA8E00827F86 /* PBXTextBookmark */;
+			B91CD39D0FB0FA8E00827F86 /* PBXTextBookmark */ = B91CD39D0FB0FA8E00827F86 /* PBXTextBookmark */;
+			B91CD39E0FB0FA8E00827F86 /* PBXTextBookmark */ = B91CD39E0FB0FA8E00827F86 /* PBXTextBookmark */;
 		};
 		sourceControlManager = B91CD2CC0FB0DF2F00827F86 /* Source Control */;
 		userBuildSettings = {
@@ -80,7 +89,7 @@
 			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
 		};
 	};
-	8D5B49AC048680CD000E48DA /* Unimotion */ = {
+	8D5B49AC048680CD000E48DA /* UnimotionPlugin */ = {
 		activeExec = 0;
 	};
 	8D5B49B7048680CD000E48DA /* Info.plist */ = {
@@ -112,24 +121,24 @@
 	};
 	B91CD2D10FB0DF4900827F86 /* UnimotionPlugin.m */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {691, 1596}}";
-			sepNavSelRange = "{1687, 0}";
-			sepNavVisRange = "{755, 1358}";
+			sepNavIntBoundsRect = "{{0, 0}, {691, 1666}}";
+			sepNavSelRange = "{292, 0}";
+			sepNavVisRange = "{0, 1277}";
 			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
 		};
 	};
 	B91CD2E60FB0E09A00827F86 /* unimotion.c */ = {
 		uiCtxt = {
-			sepNavIntBoundsRect = "{{0, 0}, {691, 6328}}";
-			sepNavSelRange = "{6500, 89}";
-			sepNavVisRange = "{8079, 1112}";
+			sepNavIntBoundsRect = "{{0, 0}, {691, 6244}}";
+			sepNavSelRange = "{3912, 3}";
+			sepNavVisRange = "{3415, 1144}";
 			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
 		};
 	};
 	B91CD2E70FB0E09A00827F86 /* unimotion.h */ = {
 		uiCtxt = {
 			sepNavIntBoundsRect = "{{0, 0}, {691, 1232}}";
-			sepNavSelRange = "{0, 0}";
+			sepNavSelRange = "{2564, 15}";
 			sepNavVisRange = "{0, 1486}";
 			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
 		};
@@ -147,5 +156,89 @@
 		rType = 0;
 		vrLen = 800;
 		vrLoc = 0;
+	};
+	B91CD38B0FB0F65E00827F86 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = B91CD2E60FB0E09A00827F86 /* unimotion.c */;
+	};
+	B91CD3920FB0FA7000827F86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B91CD2D10FB0DF4900827F86 /* UnimotionPlugin.m */;
+		name = "UnimotionPlugin.m: 116";
+		rLen = 0;
+		rLoc = 2986;
+		rType = 0;
+		vrLen = 981;
+		vrLoc = 2057;
+	};
+	B91CD3930FB0FA7000827F86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B91CD2D10FB0DF4900827F86 /* UnimotionPlugin.m */;
+		name = "UnimotionPlugin.m: 17";
+		rLen = 0;
+		rLoc = 292;
+		rType = 0;
+		vrLen = 1169;
+		vrLoc = 0;
+	};
+	B91CD3960FB0FA7000827F86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B91CD2E70FB0E09A00827F86 /* unimotion.h */;
+		name = "unimotion.h: 1";
+		rLen = 0;
+		rLoc = 0;
+		rType = 0;
+		vrLen = 1422;
+		vrLoc = 1231;
+	};
+	B91CD3970FB0FA7000827F86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B91CD2E70FB0E09A00827F86 /* unimotion.h */;
+		name = "unimotion.h: 81";
+		rLen = 15;
+		rLoc = 2564;
+		rType = 0;
+		vrLen = 1486;
+		vrLoc = 0;
+	};
+	B91CD39A0FB0FA7000827F86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B91CD2E60FB0E09A00827F86 /* unimotion.c */;
+		name = "unimotion.c: 121";
+		rLen = 3;
+		rLoc = 3912;
+		rType = 0;
+		vrLen = 1144;
+		vrLoc = 3415;
+	};
+	B91CD39C0FB0FA8E00827F86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B91CD2D10FB0DF4900827F86 /* UnimotionPlugin.m */;
+		name = "UnimotionPlugin.m: 17";
+		rLen = 0;
+		rLoc = 292;
+		rType = 0;
+		vrLen = 1277;
+		vrLoc = 0;
+	};
+	B91CD39D0FB0FA8E00827F86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B91CD2E70FB0E09A00827F86 /* unimotion.h */;
+		name = "unimotion.h: 81";
+		rLen = 15;
+		rLoc = 2564;
+		rType = 0;
+		vrLen = 1486;
+		vrLoc = 0;
+	};
+	B91CD39E0FB0FA8E00827F86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = B91CD2E60FB0E09A00827F86 /* unimotion.c */;
+		name = "unimotion.c: 121";
+		rLen = 3;
+		rLoc = 3912;
+		rType = 0;
+		vrLen = 1144;
+		vrLoc = 3415;
 	};
 }
