@@ -1,0 +1,27 @@
+0.4.1 - 14 April 2008
+- Thanks to Chris Klaiber, UniMotion now uses the latest SDK available to build. As a result it now builds without modification on 10.4 (Tiger) and 10.5 (Leopard).
+
+0.4 - 21 August 2007
+- real values are offset before being scaled
+- real values are now scaled using multiplication rather than division
+- old scale information (x_scale, y_scale, z_scale) is ignored but useful defaults now exist (ie. you do not need to have calibration data to get real values anymore)
+- passing 0 as the type is now legal and results in less work than read_sms(detect_sms(), ...)
+- read_sms_raw_bytes gives access to the raw bytes (not values) obtained from the SMS. motion -b shows these values which can be helpful in diagnosing broken SMSes (yes, I have encountered a broken SMS).
+- read_sms_scaled was provided so that code written to support the MacBook [Pro]'s scaling can work with older machines (read_sms_real is still the preferred interface)
+
+0.3 - 13 June 2006
+- raw, calibrated and real(float) numbers are available
+- calibrated numbers are adjusted by an offset
+- real numbers are divided by a scale
+- very basic calibrate app exists to create UniMotion.plist
+
+0.2 - 30 May 2006
+- fix MacBook Pro numbers (it uses int16 instead of char for it's values)
+- LGPL license
+- split up lib from apps
+- start the "massaging" process (macbookpro offset, highrespb polarity)
+
+0.1 - not publically released
+- unify the versions of Motion
+- tested working on MacBook Pro and some other machine (not specified by the tester)
+

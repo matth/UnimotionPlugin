@@ -1,0 +1,151 @@
+// !$*UTF8*$!
+{
+	089C1669FE841209C02AAC07 /* Project object */ = {
+		activeArchitecture = i386;
+		activeBuildConfigurationName = Release;
+		activeTarget = 8D5B49AC048680CD000E48DA /* Unimotion */;
+		addToTargets = (
+			8D5B49AC048680CD000E48DA /* Unimotion */,
+		);
+		codeSenseManager = B91CD2CD0FB0DF2F00827F86 /* Code sense */;
+		perUserDictionary = {
+			PBXConfiguration.PBXFileTableDataSource3.PBXFileTableDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					243,
+					20,
+					48,
+					43,
+					43,
+					20,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+					PBXFileDataSource_Target_ColumnID,
+				);
+			};
+			PBXConfiguration.PBXTargetDataSource.PBXTargetDataSource = {
+				PBXFileTableDataSourceColumnSortingDirectionKey = "-1";
+				PBXFileTableDataSourceColumnSortingKey = PBXFileDataSource_Filename_ColumnID;
+				PBXFileTableDataSourceColumnWidthsKey = (
+					20,
+					203,
+					60,
+					20,
+					48,
+					43,
+					43,
+				);
+				PBXFileTableDataSourceColumnsKey = (
+					PBXFileDataSource_FiletypeID,
+					PBXFileDataSource_Filename_ColumnID,
+					PBXTargetDataSource_PrimaryAttribute,
+					PBXFileDataSource_Built_ColumnID,
+					PBXFileDataSource_ObjectSize_ColumnID,
+					PBXFileDataSource_Errors_ColumnID,
+					PBXFileDataSource_Warnings_ColumnID,
+				);
+			};
+			PBXPerProjectTemplateStateSaveDate = 263254396;
+			PBXWorkspaceStateSaveDate = 263254396;
+		};
+		perUserProjectItems = {
+			B91CD3510FB0EED600827F86 = B91CD3510FB0EED600827F86 /* PBXBookmark */;
+			B91CD3560FB0EEE100827F86 = B91CD3560FB0EEE100827F86 /* PBXTextBookmark */;
+		};
+		sourceControlManager = B91CD2CC0FB0DF2F00827F86 /* Source Control */;
+		userBuildSettings = {
+		};
+	};
+	089C167EFE841241C02AAC07 /* English */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 101}";
+			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
+		};
+	};
+	32DBCF630370AF2F00C91783 /* UnimotionPlugin_Prefix.pch */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 150}";
+			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
+		};
+	};
+	8D5B49AC048680CD000E48DA /* Unimotion */ = {
+		activeExec = 0;
+	};
+	8D5B49B7048680CD000E48DA /* Info.plist */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{800, 0}";
+			sepNavVisRange = "{0, 800}";
+			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
+		};
+	};
+	B91CD2CC0FB0DF2F00827F86 /* Source Control */ = {
+		isa = PBXSourceControlManager;
+		fallbackIsa = XCSourceControlManager;
+		isSCMEnabled = 0;
+		scmConfiguration = {
+		};
+	};
+	B91CD2CD0FB0DF2F00827F86 /* Code sense */ = {
+		isa = PBXCodeSenseManager;
+		indexTemplatePath = "";
+	};
+	B91CD2D00FB0DF4900827F86 /* UnimotionPlugin.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 646}}";
+			sepNavSelRange = "{254, 5}";
+			sepNavVisRange = "{0, 259}";
+			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
+		};
+	};
+	B91CD2D10FB0DF4900827F86 /* UnimotionPlugin.m */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 1596}}";
+			sepNavSelRange = "{1687, 0}";
+			sepNavVisRange = "{755, 1358}";
+			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
+		};
+	};
+	B91CD2E60FB0E09A00827F86 /* unimotion.c */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 6328}}";
+			sepNavSelRange = "{6500, 89}";
+			sepNavVisRange = "{8079, 1112}";
+			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
+		};
+	};
+	B91CD2E70FB0E09A00827F86 /* unimotion.h */ = {
+		uiCtxt = {
+			sepNavIntBoundsRect = "{{0, 0}, {691, 1232}}";
+			sepNavSelRange = "{0, 0}";
+			sepNavVisRange = "{0, 1486}";
+			sepNavWindowFrame = "{{15, -1}, {750, 774}}";
+		};
+	};
+	B91CD3510FB0EED600827F86 /* PBXBookmark */ = {
+		isa = PBXBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+	};
+	B91CD3560FB0EEE100827F86 /* PBXTextBookmark */ = {
+		isa = PBXTextBookmark;
+		fRef = 8D5B49B7048680CD000E48DA /* Info.plist */;
+		name = "Info.plist: 27";
+		rLen = 0;
+		rLoc = 800;
+		rType = 0;
+		vrLen = 800;
+		vrLoc = 0;
+	};
+}

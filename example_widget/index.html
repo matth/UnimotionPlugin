@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Example Widget</title>
+</head>
+<body background="Default.png">
+
+	<h1 id="msg">Example Widget</h1>
+	
+	<script type="text/javascript">
+
+		document.getElementById("msg").innerHTML = 'JS OK';
+		
+		if (UnimotionPlugin) {
+
+			var line = UnimotionPlugin.getText();
+
+			// drop in the new text
+			document.getElementById("msg").innerHTML = line;
+			
+		} else {
+			alert("Widget plugin not loaded.");
+		}	
+		
+	</script>
+	
+</body>
+</html>
