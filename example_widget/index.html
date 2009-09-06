@@ -2,38 +2,23 @@
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-	<title>Example Widget</title>
+	<title>Seismometer</title>
+	<link rel="stylesheet" type="text/css" href="./css/style.css" media="screen">
 </head>
-<body background="Default.png">
-
-	<script type="text/javascript" src="./js/raphael.js"></script>
+<body>
+	
+	<ul id="numbers">
+		<li>1</li>
+		<li>0.5</li>
+		<li>0</li>
+		<li>0.5</li>
+		<li>-1</li>								
+	</ul>
+	<canvas id="canvas" width="281" height="181"></canvas>
+	
 	<script type="text/javascript" src="./js/util.js"></script>
 	<script type="text/javascript" src="./js/seismometer.js"></script>
 	<script type="text/javascript" src="./js/control.js"></script>
-<!-->
-	<ul>
-		<li>x: <span id="x"></span></li>
-		<li>y: <span id="y"></span></li>
-		<li>z: <span id="z"></span></li>				
-	</ul>
-	
-	<script type="text/javascript">
-
-		function update() {
-			if (typeof UnimotionPlugin != 'undefined') {
-				var motion = UnimotionPlugin.refreshData();
-				document.getElementById("x").innerHTML = UnimotionPlugin.readX().toFixed(4);
-				document.getElementById("y").innerHTML = UnimotionPlugin.readY().toFixed(4);
-				document.getElementById("z").innerHTML = UnimotionPlugin.readZ().toFixed(4);
-			} else {
-				alert("Widget plugin not loaded.");
-			}	
-		}
-	
-		setInterval("update()", 50);
-		
-	</script>
-	-->
 	
 </body>
 </html>

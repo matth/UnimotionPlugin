@@ -12,6 +12,10 @@
 	<integer>16</integer>
 	<key>CloseBoxInsetY</key>
 	<integer>14</integer>
+	<key>Width</key>
+	<integer>320</integer>	
+	<key>Height</key>
+	<integer>200</integer>	
 	<key>MainHTML</key>
 	<string>index.html</string>
 	<key>Plugin</key>

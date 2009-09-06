@@ -20,4 +20,4 @@ function calibrate() {
 
 calibrate();
 start();
-setTimeout('stop()', 2000)
+//setTimeout('stop()', 2000)
