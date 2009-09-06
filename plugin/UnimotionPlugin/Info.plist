@@ -5,22 +5,22 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>English</string>
 	<key>CFBundleExecutable</key>
-	<string>UnimotionPlugin</string>
+	<string>${EXECUTABLE_NAME}</string>
 	<key>CFBundleName</key>
-	<string>UnimotionPlugin</string>
+	<string>${PRODUCT_NAME}</string>
 	<key>CFBundleIconFile</key>
 	<string></string>
 	<key>CFBundleIdentifier</key>
-	<string>net.matthaynes.dashboard.UnimotionPlugin</string>
+	<string>com.yourcompany.yourcocoabundle</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundlePackageType</key>
 	<string>BNDL</string>
 	<key>CFBundleSignature</key>
-	<string>Matth</string>
+	<string>????</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>NSPrincipalClass</key>
-	<string>UnimotionPlugin</string>
+	<string></string>
 </dict>
 </plist>

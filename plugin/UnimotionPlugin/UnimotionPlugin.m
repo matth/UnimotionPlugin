@@ -13,30 +13,25 @@
 #include <unistd.h>
 
 @implementation UnimotionPlugin
+int type;
+double x, y, z;
 
-/*********************************************/
-// Methods required by the WidgetPlugin protocol
-/*********************************************/
+/*************************************************
+ * Methods required by the WidgetPlugin protocol
+/*************************************************/
 // initWithWebView
 //
 // This method is called when the widget plugin is first loaded as the
 // widget's web view is first initialized
 -(id)initWithWebView:(WebView*)w
 {
-        //NSLog(@"Entering -initWithWebView:%@", w);
+        NSLog(@"Entering -initWithWebView:%@", w);
         self = [super init];
-        srand(time(NULL));
+		type = detect_sms();
+       // srand(time(NULL));
         return self;
 }
 
--(void)dealloc
-{
-        [super dealloc];
-}
-
-/*********************************************/
-// Methods required by the WebScripting protocol
-/*********************************************/
 // windowScriptObjectAvailable
 //
 // This method gives you the object that you use to bridge between the
@@ -44,7 +39,7 @@
 // the object the name it's refered to in the JavaScript side.
 -(void)windowScriptObjectAvailable:(WebScriptObject*)wso
 {
-        //NSLog(@"windowScriptObjectAvailable");
+        NSLog(@"windowScriptObjectAvailable");
         [wso setValue:self forKey:@"UnimotionPlugin"];
 }
 
@@ -55,12 +50,20 @@
 +(NSString*)webScriptNameForSelector:(SEL)aSel
 {
         NSString *retval = nil;
-        //NSLog(@"webScriptNameForSelector");
-        if (aSel == @selector(getText)) {
-                retval = @"getText";
-        } else {
-                NSLog(@"\tunknown selector");
-        }
+        NSLog(@"webScriptNameForSelector");
+		
+		if (aSel == @selector(refreshData)) {
+		    retval = @"refreshData";
+		} else if (aSel == @selector(readX)) {
+		    retval = @"readX";		
+		} else if (aSel == @selector(readY)) {
+		    retval = @"readY";		
+		} else if (aSel == @selector(readZ)) {
+		    retval = @"readZ";								
+		} else {
+			NSLog(@"\tunknown selector");		
+		}
+
         return retval;
 }
 
@@ -69,10 +72,17 @@
 // This method lets you filter which methods in your plugin are
 // accessible to the JavaScript side.
 +(BOOL)isSelectorExcludedFromWebScript:(SEL)aSel {
-        if (aSel == @selector(getText)) {
-                return NO;
-        }
-        return YES;
+		if (aSel == @selector(refreshData)) {
+		    return NO;
+		} else if (aSel == @selector(readX)) {
+		    return NO;
+		} else if (aSel == @selector(readY)) {
+		    return NO;
+		} else if (aSel == @selector(readZ)) {
+		    return NO;
+		} else {
+		    return YES;
+		}
 }
 
 // isKeyExcludedFromWebScript
@@ -87,33 +97,20 @@
 // identified in isSelectorExcludedFromWebScript:.
 /*********************************************/
 
-// getText
-//
-// Returns the "Hello World!" text to the "MyPlugin" Widget.
-- (NSString *) getText
-{
+-(double) readX {
+	return x;
+}
 
-	int type = detect_sms();
-	char* name;
-    switch ( type ) {
-        case powerbook:
-            name = "powerbook";
-            break;
-        case ibook:
-            name = "ibook";
-            break;
-        case highrespb:
-            name = "highrespb";
-            break;
-        case macbookpro:
-            name = "macbookpro";
-            break;
-        default:
-            name = "???";
-            break;
-	}
-	
-	return [NSString stringWithFormat: @"%s", name];
+-(double) readY {
+	return y;
+}
+
+-(double) readZ {
+	return z;
+}
+
+- (void) refreshData {
+	read_sms_real(type, &x, &y, &z);
 }
 
 @end

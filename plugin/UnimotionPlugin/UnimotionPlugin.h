@@ -10,7 +10,7 @@
 #import <WebKit/WebKit.h>
 
 @interface UnimotionPlugin : NSObject {
-     NSString* s;
+	WebScriptObject *webScriptObject; 
 }
 
 @end

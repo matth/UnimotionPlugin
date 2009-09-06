@@ -9,9 +9,9 @@
 /* Begin PBXBuildFile section */
 		8D5B49B0048680CD000E48DA /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C167DFE841241C02AAC07 /* InfoPlist.strings */; };
 		8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7ADFEA557BF11CA2CBB /* Cocoa.framework */; };
-		B91CD2D20FB0DF4900827F86 /* UnimotionPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B91CD2D10FB0DF4900827F86 /* UnimotionPlugin.m */; };
-		B91CD2E80FB0E09A00827F86 /* unimotion.c in Sources */ = {isa = PBXBuildFile; fileRef = B91CD2E60FB0E09A00827F86 /* unimotion.c */; };
-		B91CD2EC0FB0E0BB00827F86 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B91CD2EB0FB0E0BB00827F86 /* IOKit.framework */; };
+		B90C42FA105412C100B7BD03 /* UnimotionPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = B90C42F9105412C100B7BD03 /* UnimotionPlugin.m */; };
+		B90C430A1054144000B7BD03 /* unimotion.c in Sources */ = {isa = PBXBuildFile; fileRef = B90C43081054144000B7BD03 /* unimotion.c */; };
+		B90C43211054148E00B7BD03 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B90C43201054148E00B7BD03 /* IOKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,11 +22,11 @@
 		32DBCF630370AF2F00C91783 /* UnimotionPlugin_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnimotionPlugin_Prefix.pch; sourceTree = "<group>"; };
 		8D5B49B6048680CD000E48DA /* UnimotionPlugin.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnimotionPlugin.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		8D5B49B7048680CD000E48DA /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B91CD2D00FB0DF4900827F86 /* UnimotionPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnimotionPlugin.h; sourceTree = "<group>"; };
-		B91CD2D10FB0DF4900827F86 /* UnimotionPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnimotionPlugin.m; sourceTree = "<group>"; };
-		B91CD2E60FB0E09A00827F86 /* unimotion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = unimotion.c; path = unimotion/unimotion.c; sourceTree = "<group>"; };
-		B91CD2E70FB0E09A00827F86 /* unimotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unimotion.h; path = unimotion/unimotion.h; sourceTree = "<group>"; };
-		B91CD2EB0FB0E0BB00827F86 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
+		B90C42F8105412C100B7BD03 /* UnimotionPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UnimotionPlugin.h; sourceTree = "<group>"; };
+		B90C42F9105412C100B7BD03 /* UnimotionPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnimotionPlugin.m; sourceTree = "<group>"; };
+		B90C43081054144000B7BD03 /* unimotion.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = unimotion.c; path = unimotion/unimotion.c; sourceTree = "<group>"; };
+		B90C43091054144000B7BD03 /* unimotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = unimotion.h; path = unimotion/unimotion.h; sourceTree = "<group>"; };
+		B90C43201054148E00B7BD03 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = /System/Library/Frameworks/IOKit.framework; sourceTree = "<absolute>"; };
 		D2F7E65807B2D6F200F64583 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
@@ -36,28 +36,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D5B49B4048680CD000E48DA /* Cocoa.framework in Frameworks */,
-				B91CD2EC0FB0E0BB00827F86 /* IOKit.framework in Frameworks */,
+				B90C43211054148E00B7BD03 /* IOKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		089C166AFE841209C02AAC07 /* Unimotion */ = {
+		089C166AFE841209C02AAC07 /* UnimotionPlugin */ = {
 			isa = PBXGroup;
 			children = (
-				B91CD2EB0FB0E0BB00827F86 /* IOKit.framework */,
-				B91CD2E60FB0E09A00827F86 /* unimotion.c */,
-				B91CD2E70FB0E09A00827F86 /* unimotion.h */,
-				B91CD2D00FB0DF4900827F86 /* UnimotionPlugin.h */,
-				B91CD2D10FB0DF4900827F86 /* UnimotionPlugin.m */,
+				B90C43201054148E00B7BD03 /* IOKit.framework */,
+				B90C43081054144000B7BD03 /* unimotion.c */,
+				B90C43091054144000B7BD03 /* unimotion.h */,
+				B90C42F8105412C100B7BD03 /* UnimotionPlugin.h */,
+				B90C42F9105412C100B7BD03 /* UnimotionPlugin.m */,
 				08FB77AFFE84173DC02AAC07 /* Classes */,
 				32C88E010371C26100C91783 /* Other Sources */,
 				089C167CFE841241C02AAC07 /* Resources */,
 				089C1671FE841209C02AAC07 /* Frameworks and Libraries */,
 				19C28FB8FE9D52D311CA2CBB /* Products */,
 			);
-			name = Unimotion;
+			name = UnimotionPlugin;
 			sourceTree = "<group>";
 		};
 		089C1671FE841209C02AAC07 /* Frameworks and Libraries */ = {
@@ -136,7 +136,7 @@
 			);
 			name = UnimotionPlugin;
 			productInstallPath = "$(HOME)/Library/Bundles";
-			productName = Unimotion;
+			productName = UnimotionPlugin;
 			productReference = 8D5B49B6048680CD000E48DA /* UnimotionPlugin.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
@@ -148,7 +148,7 @@
 			buildConfigurationList = 1DEB913E08733D840010E9CD /* Build configuration list for PBXProject "UnimotionPlugin" */;
 			compatibilityVersion = "Xcode 3.0";
 			hasScannedForEncodings = 1;
-			mainGroup = 089C166AFE841209C02AAC07 /* Unimotion */;
+			mainGroup = 089C166AFE841209C02AAC07 /* UnimotionPlugin */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -173,8 +173,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B91CD2D20FB0DF4900827F86 /* UnimotionPlugin.m in Sources */,
-				B91CD2E80FB0E09A00827F86 /* unimotion.c in Sources */,
+				B90C42FA105412C100B7BD03 /* UnimotionPlugin.m in Sources */,
+				B90C430A1054144000B7BD03 /* unimotion.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,7 +214,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_GC = required;
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = UnimotionPlugin_Prefix.pch;
@@ -239,15 +238,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = (
-					i386,
 					ppc,
+					i386,
 				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				HEADER_SEARCH_PATHS = unimotion;
+				LIBRARY_SEARCH_PATHS = "./unimotion/**";
 				PREBINDING = NO;
 				SDKROOT = "$(DEVELOPER_SDK_DIR)/MacOSX10.5.sdk";
-				VALID_ARCHS = "ppc64 ppc7400 ppc970 i386 x86_64 ppc";
 			};
 			name = Release;
 		};

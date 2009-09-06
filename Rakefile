@@ -1,12 +1,9 @@
 wdgt_bin = "UnimotionExampleWidget.wdgt"
 xcode_proj = "plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj/"
 
-
 task :default => [:build]
 
-task :build => [:build_plugin, :build_wdgt] do
-
-end
+task :build => [:build_plugin, :build_wdgt, :install_wdgt] do end
 
 task :build_plugin => [:clean_plugin] do
 	sh "xcodebuild -project #{xcode_proj}"
@@ -16,7 +13,7 @@ task :clean_plugin do
 	sh "rm -rdf plugin/UnimotionPlugin/build"
 end
 
-task :build_wdgt => [:build_plugin, :clean_wdgt] do
+task :build_wdgt => [:clean_wdgt] do
 	sh "mkdir -p #{wdgt_bin}/UnimotionPlugin.bundle"
 	sh "cp -r example_widget/* #{wdgt_bin}"
 	sh "cp -r plugin/UnimotionPlugin/build/Release/UnimotionPlugin.bundle/*  #{wdgt_bin}/UnimotionPlugin.bundle"

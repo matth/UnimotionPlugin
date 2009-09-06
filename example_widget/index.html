@@ -6,24 +6,34 @@
 </head>
 <body background="Default.png">
 
-	<h1 id="msg">Example Widget</h1>
+	<script type="text/javascript" src="./js/raphael.js"></script>
+	<script type="text/javascript" src="./js/util.js"></script>
+	<script type="text/javascript" src="./js/seismometer.js"></script>
+	<script type="text/javascript" src="./js/control.js"></script>
+<!-->
+	<ul>
+		<li>x: <span id="x"></span></li>
+		<li>y: <span id="y"></span></li>
+		<li>z: <span id="z"></span></li>				
+	</ul>
 	
 	<script type="text/javascript">
 
-		document.getElementById("msg").innerHTML = 'JS OK';
-		
-		if (UnimotionPlugin) {
-
-			var line = UnimotionPlugin.getText();
-
-			// drop in the new text
-			document.getElementById("msg").innerHTML = line;
-			
-		} else {
-			alert("Widget plugin not loaded.");
-		}	
+		function update() {
+			if (typeof UnimotionPlugin != 'undefined') {
+				var motion = UnimotionPlugin.refreshData();
+				document.getElementById("x").innerHTML = UnimotionPlugin.readX().toFixed(4);
+				document.getElementById("y").innerHTML = UnimotionPlugin.readY().toFixed(4);
+				document.getElementById("z").innerHTML = UnimotionPlugin.readZ().toFixed(4);
+			} else {
+				alert("Widget plugin not loaded.");
+			}	
+		}
+	
+		setInterval("update()", 50);
 		
 	</script>
+	-->
 	
 </body>
 </html>
