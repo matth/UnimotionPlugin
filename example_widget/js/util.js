@@ -1,21 +1,29 @@
+// Too much ruby
 Array.prototype.each = function(callback) {
 	for (var i = 0;i < this.length;i++) {
 		callback(this[i], i);
 	}
 };
 
+// For browser testing, where UnimotionPlugin doesn't exist
 if (typeof UnimotionPlugin == 'undefined') {
-	function randomNum() {
-		var num = Math.random();
-		if (Math.random() > 0.5) {
-			num = num * -1;
+
+	var UnimotionPlugin = function() {
+		function randomNum() {
+			var num = Math.random();
+			if (Math.random() > 0.5) {
+				num = num * -1;
+			}
+			return num;
 		}
-		return num;
-	}
-	var UnimotionPlugin = {
-		'refreshData' : function() {},
-		'readX' : randomNum,
-		'readY' : randomNum,
-		'readZ' : randomNum
-	}
+
+		return {
+			'refreshData' : function() {},
+			'readX' : randomNum,
+			'readY' : randomNum,
+			'readZ' : randomNum
+		}
+
+	}();
+	
 }

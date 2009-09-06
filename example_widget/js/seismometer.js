@@ -2,19 +2,17 @@ var Seismometer = function() {
 
 	var height = 180,
 		width  = 260,
-		data = [0],
-		line;
-		
-	var canvas = document.getElementById("canvas");
-	
- 	var ctx = canvas.getContext("2d");
+		data = [],
+		line,
+		canvas = document.getElementById("canvas"),
+		ctx = canvas.getContext("2d");
 
 	function setup() {
 		
 		// Clear
 		ctx.clearRect(0,0,width,height);
 		
-		// Nice bg
+		// A bg
 		ctx.fillStyle = "rgb(0,0,0)";
 	 	ctx.fillRect(0, 0, width, height);
 
@@ -71,10 +69,7 @@ var Seismometer = function() {
 				data.shift();							
 			}
 			drawGraph();
-		},
-		'calibrate' : function() {
-			
-		},
+		}
 	}
 
 }();
