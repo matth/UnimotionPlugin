@@ -5,58 +5,43 @@ var Seismometer = function() {
 		data = [],
 		line,
 		canvas = document.getElementById("canvas"),
-		ctx = canvas.getContext("2d");
+		ctx = canvas.getContext("2d"),
+		img1_pos = 0,
+		img2_pos = -164;
 
-	function setup() {
-		
+	// Image
+    var img1 = new Image();
+    img1.onload = function(){}
+    img1.src = './images/paper.png';
+
+    var img2 = new Image();
+    img2.onload = function(){}
+    img2.src = './images/paper.png';
+	
+	var paper_effect = new Image();
+    paper_effect.onload = function(){}	
+    paper_effect.src = './images/paper_3d_effect.png';
+
+	function drawGraph() {
 		// Clear
 		ctx.clearRect(0,0,width,height);
 		
-		// A bg
-		ctx.fillStyle = "rgb(0,0,0)";
-	 	ctx.fillRect(0, 0, width, height);
-
-		// A grid	
-		function drawGrid(x, y, w, h, columns, rows, color) {
-			ctx.lineWidth = 1;	
-			ctx.strokeStyle = color;
-			ctx.strokeRect(x,y,w,h);
-		
-			var colWidth  = Math.round(w / columns),
-				rowHeight = Math.round(h / rows);
-		
-			// Do columns
-			for (var i=0;i<columns;i++) {
-				ctx.beginPath();
-				ctx.moveTo(x + (colWidth * i), y);
-				ctx.lineTo(x + (colWidth * i), y + h);
-				ctx.closePath();		
-				ctx.stroke();			
-			}
-
-			// Do rows
-			for (var i=0;i<rows;i++) {
-				ctx.beginPath();
-				ctx.moveTo(x, y + (rowHeight * i));
-				ctx.lineTo(x + w, y + (rowHeight * i));
-				ctx.closePath();		
-				ctx.stroke();			
-			}		
-					
-		}
-	
-		drawGrid(0, 0, width, height, 10, 8, "rgb(34,34,34)");
-
-	}
-	
-	function drawGraph() {
-		setup();
 		ctx.strokeStyle = "#036";
-		ctx.lineWidth =  4;
+		ctx.lineWidth =  1;
 		ctx.beginPath();
-		ctx.moveTo(-20, 100);		
+		ctx.moveTo(125, 0);
+		
+		// Move images
+       	ctx.drawImage(img1, 2, img1_pos++);
+       	ctx.drawImage(img2, 2, img2_pos++);
+      	ctx.drawImage(paper_effect, 2, 0);
+
+		// Loop them
+		if (img1_pos >= 164) img1_pos = -164;
+		if (img2_pos >= 164) img2_pos = -164;		
+		
 		data.each(function(item, index) {
-			ctx.lineTo((index * 7) + 14, 90 + (80 * (-1 * item)));
+			ctx.lineTo(125 + (80 * (-1 * item)), 0 + (index));
 		});
 		ctx.stroke();
 	}
@@ -64,10 +49,11 @@ var Seismometer = function() {
 	return {
 		'update' : function() {
 			UnimotionPlugin.refreshData();
-			data.push(UnimotionPlugin.readY().toFixed(1));
-			if (data.length > 36) {
-				data.shift();							
+			data.unshift(UnimotionPlugin.readY().toFixed(1));
+			if (data.length > 164) {
+				data.pop();							
 			}
+			//data[0] = 0;
 			drawGraph();
 		}
 	}

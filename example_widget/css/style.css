@@ -1,28 +1,14 @@
 body {
-	background:#000;
+	background:url('../Default.png') no-repeat;
 	margin:0;
 	padding:0;
-	font-family:Tahoma;
-	color:#666;
-}
-
-#numbers {
-	list-style:none;
-	padding:0;
-	margin:5px 0 0 8px;	
-	font-size:10px;
-	width:20px;
-}
-
-#numbers li {
-	height:45px;
-	text-align:center;
-	font-weight:bold;
 }
 
 #canvas {
 	position:absolute;
-	left:30px;
-	top:10px;
+	left:38px;
+	top:47px;
+	width:294px;
+	height:166px;
 	
 }
