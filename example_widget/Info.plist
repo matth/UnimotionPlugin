@@ -13,9 +13,9 @@
 	<key>CloseBoxInsetY</key>
 	<integer>14</integer>
 	<key>Width</key>
-	<integer>320</integer>	
+	<integer>332</integer>	
 	<key>Height</key>
-	<integer>200</integer>	
+	<integer>242</integer>	
 	<key>MainHTML</key>
 	<string>index.html</string>
 	<key>Plugin</key>

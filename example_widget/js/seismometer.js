@@ -29,7 +29,7 @@ var Seismometer = function() {
 		ctx.strokeStyle = "#036";
 		ctx.lineWidth =  1;
 		ctx.beginPath();
-		ctx.moveTo(125, 0);
+		ctx.moveTo(135, 0);
 		
 		// Move images
        	ctx.drawImage(img1, 2, img1_pos++);
@@ -41,7 +41,7 @@ var Seismometer = function() {
 		if (img2_pos >= 164) img2_pos = -164;		
 		
 		data.each(function(item, index) {
-			ctx.lineTo(125 + (80 * (-1 * item)), 0 + (index));
+			ctx.lineTo(135 + (80 * (-1 * item)), 0 + (index));
 		});
 		ctx.stroke();
 	}
@@ -49,7 +49,7 @@ var Seismometer = function() {
 	return {
 		'update' : function() {
 			UnimotionPlugin.refreshData();
-			data.unshift(UnimotionPlugin.readY().toFixed(1));
+			data.unshift(UnimotionPlugin.readY().toFixed(5));
 			if (data.length > 164) {
 				data.pop();							
 			}
