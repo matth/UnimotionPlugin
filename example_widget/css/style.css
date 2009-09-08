@@ -6,9 +6,9 @@ body {
 
 #canvas {
 	position:absolute;
-	left:38px;
-	top:47px;
-	width:294px;
-	height:166px;
-	
+	left:26px;
+	top:35px;
+	width:222px;
+	height:123px;
+	padding:0;
 }
