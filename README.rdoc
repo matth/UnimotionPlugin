@@ -1,3 +1,16 @@
+= Unimotion Dashboard Widget Plugin
+
+This is a dashboard widget plugin wrapper for the excellent Unimotion c library.
+
+http://unimotion.sourceforge.net/
+
+Unimotion allows you to read data from the Sudden Motion Sensor found it mac laptops. This plugin allows widget developers to read this data via javascript and build applications that have an awareness of an Apple laptops orientaton and movement.
+
+== Example: Seismometer 
+
+The example application is an imitation seismometer, it plots movement on the X, Y and Z axis using data from the Unimotion plugin. This is demonstrates a simple use of the plugin, it could also be used to control games, sounds, etc.
+
+
 == Using the widget plugin
 
 Follow these instructions to use the widget plugin within your own dashboard widgets.
@@ -79,3 +92,29 @@ It's often preferable to develop your widget in the browser, in this situation t
 		}();
 	
 	}
+
+
+== License:
+
+=== The Unimotion Dashboard widget plugin and all examples are licensed under GPLv3
+
+(GPLv3)
+
+Copyright (C) 2009 Matt Haynes
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>
+
+=== Unimotion C libraries are licensed under LGPL 2.1
+
+Please see plugin/UnimotionPlugin/unimotion/LGPL.txt 
