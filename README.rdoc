@@ -2,7 +2,7 @@
 
 This is a dashboard widget plugin wrapper for the excellent Unimotion C library by Lincoln Ramsay, http://unimotion.sourceforge.net 
 
-Unimotion allows you to read data from the Sudden Motion Sensor found it mac laptops. This plugin allows widget developers to read this data via javascript and build applications that have an awareness of an Apple laptops orientaton and movement.
+Unimotion allows you to read data from the Sudden Motion Sensor found it Apple Mac laptops. This plugin allows widget developers to read SMS data via javascript and build applications that have an awareness of an Apple laptops orientaton and movement.
 
 == Example: Seismometer 
 
