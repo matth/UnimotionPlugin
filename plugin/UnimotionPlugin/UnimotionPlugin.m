@@ -59,7 +59,9 @@ double x, y, z;
 		} else if (aSel == @selector(readY)) {
 		    retval = @"readY";		
 		} else if (aSel == @selector(readZ)) {
-		    retval = @"readZ";								
+		    retval = @"readZ";					
+		} else if (aSel == @selector(detectSms)) {
+		    retval = @"detectSms";					
 		} else {
 			NSLog(@"\tunknown selector");		
 		}
@@ -80,6 +82,8 @@ double x, y, z;
 		    return NO;
 		} else if (aSel == @selector(readZ)) {
 		    return NO;
+		} else if (aSel == @selector(detectSms)) {
+		    return NO;		
 		} else {
 		    return YES;
 		}
@@ -109,8 +113,12 @@ double x, y, z;
 	return z;
 }
 
-- (void) refreshData {
+-(void) refreshData {
 	read_sms_real(type, &x, &y, &z);
+}
+
+-(int) detectSms {
+	return detect_sms();
 }
 
 @end

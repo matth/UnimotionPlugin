@@ -41,12 +41,15 @@
 		Seismometer.reset();
 		clearInterval(refreshInterval);
 	}
-	
-	if (typeof widget != 'undefined') {
-		widget.onhide = stop;
-		widget.onshow = start;
-	} else {
+
+	if (UnimotionPlugin.detectSms() != 0) {
+		if (typeof widget != 'undefined') {
+			widget.onhide = stop;
+			widget.onshow = start;
+		} 
 		start();
+	} else {
+		document.getElementById('error').style.display = "block";
 	}
-	
+
 })();

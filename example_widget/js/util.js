@@ -21,7 +21,10 @@ if (typeof widget == 'undefined') {
 			'refreshData' : function() {},
 			'readX' : randomNum,
 			'readY' : randomNum,
-			'readZ' : randomNum
+			'readZ' : randomNum,
+			'hasHardware' : function() {
+				return true;
+			}
 		}
 
 	}();

@@ -3,6 +3,7 @@ body {
 	padding:0;
 	font-family:Helvetica;
 	font-size:10px;
+	color:#fff;
 }
 
 #canvas {
@@ -12,6 +13,20 @@ body {
 	width:222px;
 	height:123px;
 	padding:0;
+}
+
+#error {
+	color:#ddd;
+	position:absolute;
+	left:32px;
+	top:40px;
+	width:185px;
+	height:123px;
+	display:none;
+}
+
+#error h1 {
+	font-size:10px;
 }
 
 /* Apple Stuff*/
@@ -29,7 +44,6 @@ body {
 }
 
 #back {
-	color:#fff;
 	width:248px;
 	height:180px;
 	background:url('../images/back.png') no-repeat;	
@@ -49,13 +63,13 @@ body {
 	font-size:10px;
 }
 
-#info a {
+a {
 	color:#5B58BA;
 	font-weight:bold;
 	text-decoration:none;
 }
 
-#info a:hover {
+a:hover {
 	color:#fff;
 }
 
