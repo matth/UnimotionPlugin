@@ -1,0 +1,73 @@
+== Using the widget plugin
+
+Follow these instructions to use the widget plugin within your Dashboard widgets.
+
+Firstly copy the directory UnimotionPlugin.bundle into your widget's root directory. Once in place you must reference this in your widget's Info.plist file so it gets loaded in correctly. Add the following keys:
+
+	<key>Plugin</key>
+	<string>UnimotionPlugin.bundle</string> 
+	
+The plugin should now be loaded into your widget, the following statement should return true.
+
+	if (typeof UnimotionPlugin != 'undefined') 
+	
+You can now use the plugin's API from your javascript code
+
+=== The API
+
+==== UnimotionPlugin.detectSms()
+
+This will return an integer representing the sudden motion sensor hardware found
+
+* 0 = No hardware found
+* 1 = Powerbook
+* 2 = iBook
+* 3 = High Res. Powerbook
+* 4 = Macbook / Macbook Pro
+
+==== UnimotionPlugin.refreshData();
+
+This will refresh the readings from the sudden motion sensor
+
+==== UnimotionPlugin.readX()
+
+Returns a floating point number representing the last reading from the X axis 
+
+==== UnimotionPlugin.readY()
+
+Returns a floating point number representing the last reading from the Y axis
+
+==== UnimotionPlugin.readZ()
+
+Returns a floating point number representing the last reading from the Z axis
+
+== Developing your widget in a browser
+
+It's often preferable to develop your widget in the browser, in this situation the plugin shall not be available. The below code set's up a 'mock' representation of the plugin so you can continue development in the browser.
+
+	// For browser testing, where UnimotionPlugin doesn't exist
+	if (typeof widget == 'undefined') {
+
+		var UnimotionPlugin = function() {
+		
+			function randomNum() {
+				var num = Math.random();
+				if (Math.random() > 0.5) {
+					num = num * -1;
+				}
+				return num;
+			}
+
+			return {
+				'refreshData' : function() {},
+				'readX' : randomNum,
+				'readY' : randomNum,
+				'readZ' : randomNum,
+				'detectSms' : function() {
+					return 4; // or whatever hardware you want to represent
+				}
+			}
+
+		}();
+	
+	}
