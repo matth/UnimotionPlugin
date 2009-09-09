@@ -34,6 +34,7 @@
 	}
 
 	function start() {
+		clearInterval(refreshInterval);
 		refreshInterval = setInterval('Seismometer.update();', 80);
 	}
 
