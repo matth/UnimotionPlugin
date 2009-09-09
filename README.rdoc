@@ -1,8 +1,12 @@
 == Using the widget plugin
 
-Follow these instructions to use the widget plugin within your Dashboard widgets.
+Follow these instructions to use the widget plugin within your own dashboard widgets.
 
-Firstly copy the directory UnimotionPlugin.bundle into your widget's root directory. Once in place you must reference this in your widget's Info.plist file so it gets loaded in correctly. Add the following keys:
+Firstly copy the directory UnimotionPlugin.bundle into your widget's root directory. 
+
+Once in place you must reference this in your widget's Info.plist file so it gets loaded in correctly. 
+
+Add the following keys to your Info.plist:
 
 	<key>Plugin</key>
 	<string>UnimotionPlugin.bundle</string> 
@@ -17,13 +21,14 @@ You can now use the plugin's API from your javascript code
 
 ==== UnimotionPlugin.detectSms()
 
-This will return an integer representing the sudden motion sensor hardware found
+This will return an integer representing the sudden motion sensor hardware found.
 
-* 0 = No hardware found
-* 1 = Powerbook
-* 2 = iBook
-* 3 = High Res. Powerbook
-* 4 = Macbook / Macbook Pro
+	* 0 = No hardware found
+	* 1 = Powerbook
+	* 2 = iBook
+	* 3 = High Res. Powerbook
+	* 4 = Macbook / Macbook Pro
+
 
 ==== UnimotionPlugin.refreshData();
 
