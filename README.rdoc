@@ -8,6 +8,16 @@ Unimotion allows you to read data from the Sudden Motion Sensor found it Apple M
 
 The example application is an imitation seismometer, it plots movement on the X, Y and Z axis using data from the Unimotion plugin. This is demonstrates a simple use of the plugin, it could also be used to control games, sounds, etc.
 
+== Building from source
+
+To build from source you will need Xcode installed. You can open the below project and build from there:
+
+plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj
+
+If you hve rake installed then a task has been setup to aid compilation. 
+
+	rake build_plugin # Builds the UnimotionPlugin.bundle
+	rake build_wdgt  # Builds the example Seismometer widget
 
 == Using the widget plugin
 
