@@ -23,11 +23,13 @@ You can now use the plugin's API from your javascript code
 
 This will return an integer representing the sudden motion sensor hardware found.
 
-	* 0 = No hardware found
-	* 1 = Powerbook
-	* 2 = iBook
-	* 3 = High Res. Powerbook
-	* 4 = Macbook / Macbook Pro
+	Return values :
+	
+	0 = No hardware found
+	1 = Powerbook
+	2 = iBook
+	3 = High Res. Powerbook
+	4 = Macbook / Macbook Pro
 
 
 ==== UnimotionPlugin.refreshData();
