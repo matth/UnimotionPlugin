@@ -19,6 +19,7 @@ You can now use the plugin's API from your javascript code
 
 === The API
 
+
 ==== UnimotionPlugin.detectSms()
 
 This will return an integer representing the sudden motion sensor hardware found.
