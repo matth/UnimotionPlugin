@@ -1,6 +1,6 @@
 = Unimotion Dashboard Widget Plugin
 
-This is a dashboard widget plugin wrapper for the excellent Unimotion c library.
+This is a dashboard widget plugin wrapper for the excellent Unimotion c library by Lincoln Ramsay.
 
 http://unimotion.sourceforge.net/
 
