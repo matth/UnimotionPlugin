@@ -6,7 +6,7 @@ Array.prototype.each = function(callback) {
 };
 
 // For browser testing, where UnimotionPlugin doesn't exist
-if (typeof UnimotionPlugin == 'undefined') {
+if (typeof widget == 'undefined') {
 
 	var UnimotionPlugin = function() {
 		function randomNum() {

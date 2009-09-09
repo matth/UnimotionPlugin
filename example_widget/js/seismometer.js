@@ -7,7 +7,8 @@ var Seismometer = function() {
 		canvas = document.getElementById("canvas"),
 		ctx = canvas.getContext("2d"),
 		img1_pos = 0,
-		img2_pos = -164;
+		img2_pos = -164,
+		axis = 'y';
 
 	// Image
     var img1 = new Image();
@@ -46,14 +47,37 @@ var Seismometer = function() {
 		ctx.stroke();
 	}
 	
+	function getSmsVal() {
+		switch(axis) {
+			case 'x':
+				return UnimotionPlugin.readX();
+				break;
+			case 'y':
+				return UnimotionPlugin.readY();
+				break;
+			case 'z':
+				return UnimotionPlugin.readZ();
+				break;
+			default:
+				return UnimotionPlugin.readY();
+		}
+	}
+	
 	return {
 		'update' : function() {
 			UnimotionPlugin.refreshData();
-			data.unshift(UnimotionPlugin.readY().toFixed(5));
+			data.unshift(getSmsVal().toFixed(5));
 			if (data.length > 164) {
 				data.pop();							
 			}
-			//data[0] = 0;
+			drawGraph();
+		},
+		'changeAxis' : function(a) {
+			this.reset();
+			axis = a;
+		},
+		'reset' : function() {
+			data = [];
 			drawGraph();
 		}
 	}

@@ -1,16 +1,52 @@
+(function() {
 
-var refreshInterval;
+	var front = document.getElementById("front"),
+ 		back  = document.getElementById("back"),
+		refreshInterval,
+		gDoneButton = new AppleGlassButton(document.getElementById("doneButton"), "Done", hideBack),
+		gInfoButton = new AppleInfoButton(document.getElementById("infoButton"),front, "black", "black", showBack);
 
-function refresh() {
-	Seismometer.update();
-}
+	document.getElementById('axis').onchange = function() {
+		Seismometer.changeAxis(document.getElementById('axis').value);
+	}
 
-function start() {
-	refreshInterval = setInterval('refresh()', 80);
-}
+	function showBack() {
+		
+		if (window.widget) {
+			widget.prepareForTransition("ToBack");
+			setTimeout('widget.performTransition();', 1)
+		}
+		
+		front.style.display="none";
+		back.style.display="block";
+	}
+	
+	function hideBack() {
+		
+		if (window.widget) {
+			widget.prepareForTransition("ToFront");
+			setTimeout('widget.performTransition();', 1);
+		}
+		
+		back.style.display="none";
+		front.style.display="block";		
+		
+	}
 
-function stop() {
-	clearInterval(refreshInterval);
-}
+	function start() {
+		refreshInterval = setInterval('Seismometer.update();', 80);
+	}
 
-start();
+	function stop() {
+		Seismometer.reset();
+		clearInterval(refreshInterval);
+	}
+	
+	if (typeof widget != 'undefined') {
+		widget.onhide = stop;
+		widget.onshow = start;
+	} else {
+		start();
+	}
+	
+})();

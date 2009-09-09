@@ -3,12 +3,36 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Seismometer</title>
-	<link rel="stylesheet" type="text/css" href="./css/style.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="./css/style.css" media="screen" />
+
+	<!-- Apple Widget Stuff -->	
+	<script type='text/javascript' src='/System/Library/WidgetResources/AppleClasses/AppleInfoButton.js' charset='utf-8'></script>
+	<script type='text/javascript' src='/System/Library/WidgetResources/AppleClasses/AppleAnimator.js' charset='utf-8'></script>
+	<script type='text/javascript' src='/System/Library/WidgetResources/AppleClasses/AppleButton.js' charset='utf-8'></script>	
+	
 </head>
 <body>
-	
-	<canvas id="canvas"></canvas>
-	
+
+	<div id="front">
+		<canvas id="canvas"></canvas>
+		<div id='infoButton'></div>		
+	</div>
+
+	<div id="back">
+		<form method="get" action="/">
+			<div>
+				<label for="axis">Axis:</label>
+				<select name="axis" id="axis">
+					<option value="x">X</option>
+					<option value="y" selected="selected">Y</option>
+					<option value="z">Z</option>										
+				</select>
+			</div>
+		</form>
+		<p id="info">Developed by <a href="http://matthaynes.net/">matth</a> using <a href="http://github.com/matth/UnimotionPlugin/tree/master">unimotion</a></p>
+		<div id="doneButton"></div>	
+	</div>
+
 	<script type="text/javascript" src="./js/util.js"></script>
 	<script type="text/javascript" src="./js/seismometer.js"></script>
 	<script type="text/javascript" src="./js/control.js"></script>

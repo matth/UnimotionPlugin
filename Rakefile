@@ -1,4 +1,4 @@
-wdgt_bin = "UnimotionExampleWidget.wdgt"
+wdgt_bin = "Seismometer.wdgt"
 xcode_proj = "plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj/"
 
 task :default => [:build]
@@ -17,6 +17,7 @@ task :build_wdgt => [:clean_wdgt] do
 	sh "mkdir -p #{wdgt_bin}/UnimotionPlugin.bundle"
 	sh "cp -r example_widget/* #{wdgt_bin}"
 	sh "cp -r plugin/UnimotionPlugin/build/Release/UnimotionPlugin.bundle/*  #{wdgt_bin}/UnimotionPlugin.bundle"
+	sh "rm  #{wdgt_bin}/design.psd"
 end
 
 task :clean_wdgt do

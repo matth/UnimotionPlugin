@@ -1,7 +1,8 @@
 body {
-	background:url('../Default.png') no-repeat;
 	margin:0;
 	padding:0;
+	font-family:Helvetica;
+	font-size:10px;
 }
 
 #canvas {
@@ -12,3 +13,63 @@ body {
 	height:123px;
 	padding:0;
 }
+
+/* Apple Stuff*/
+#infoButton {
+	position:absolute;
+	top:155px;
+	left:225px;
+}
+
+#front {
+	width:248px;
+	height:180px;
+	background:url('../Default.png') no-repeat;	
+	display:block;
+}
+
+#back {
+	color:#fff;
+	width:248px;
+	height:180px;
+	background:url('../images/back.png') no-repeat;	
+	display:none;
+}
+
+#back form {
+	position:absolute;
+	top:45px;
+	left:10px;	
+}
+
+#info {
+	position:absolute;
+	top:88px;	
+	left:13px;
+	font-size:10px;
+}
+
+#info a {
+	color:#5B58BA;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+#info a:hover {
+	color:#fff;
+}
+
+label {
+	padding-left:3px;
+}
+
+select {
+	display:block;
+	margin-top:5px;
+}
+ 
+#doneButton {
+	position:absolute;
+	top:140px;
+	left:185px;
+}	
