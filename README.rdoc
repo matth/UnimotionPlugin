@@ -12,9 +12,9 @@ The example application is an imitation seismometer, it plots movement on the X,
 
 To build from source you will need Xcode installed. You can open the below project and build from there:
 
-plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj
+	plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj
 
-If you hve rake installed then a task has been setup to aid compilation. 
+If you have rake installed then a Rakefile has been setup to aid compilation. 
 
 	rake build_plugin # Builds the UnimotionPlugin.bundle
 	rake build_wdgt  # Builds the example Seismometer widget
