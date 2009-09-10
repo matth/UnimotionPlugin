@@ -22,7 +22,7 @@ if (typeof widget == 'undefined') {
 			'readX' : randomNum,
 			'readY' : randomNum,
 			'readZ' : randomNum,
-			'hasHardware' : function() {
+			'detectSms' : function() {
 				return true;
 			}
 		}
