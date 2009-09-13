@@ -6,6 +6,13 @@ UnimotionPlugin is an Apple Mac OS X Dashboard widget plugin for reading the sud
 
 UnimotionPlugin allows you to read data from the Sudden Motion Sensor found it Apple Mac laptops. This sensor can measure the orientation and movement of your laptop. Dashboard widget developers are now easily able to read the SMS data via javascript to build widgets that have an awareness of an Apple laptops orientation and movement.
 
+== Download
+
+The latest compiled universal binary download of this bundle is available at
+
+* http://cloud.github.com/downloads/matth/UnimotionPlugin/UnimotionPlugin.bundle.0.0.1.tgz
+
+
 == Building from source
 
 The project is hosted on Github http://github.com/matth/UnimotionPlugin To build from source you will need Xcode installed.
@@ -83,27 +90,27 @@ It's often preferable to develop your widget in the browser, in this situation t
 	// For browser testing, where UnimotionPlugin doesn't exist
 	if (typeof widget == 'undefined') {
 
-		var UnimotionPlugin = function() {
+	  var UnimotionPlugin = function() {
 		
-			function randomNum() {
-				var num = Math.random();
-				if (Math.random() > 0.5) {
-					num = num * -1;
-				}
-				return num;
-			}
+		function randomNum() {
+		  var num = Math.random();
+		  if (Math.random() > 0.5) {
+		    num = num * -1;
+		  }
+		  return num;
+		}
 
-			return {
-				'refreshData' : function() {},
-				'readX' : randomNum,
-				'readY' : randomNum,
-				'readZ' : randomNum,
-				'detectSms' : function() {
-					return 4; // Hardware you want to represent
-				}
-			}
+		return {
+		  'refreshData' : function() {},
+		  'readX' : randomNum,
+		  'readY' : randomNum,
+		  'readZ' : randomNum,
+		  'detectSms' : function() {
+		    return 4; // Hardware you want to represent
+		  }
+		}
 
-		}();
+	  }();
 	
 	}
 
