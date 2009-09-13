@@ -1,3 +1,4 @@
+VERSION_NUMBER = "0.0.1"
 wdgt_bin = "Seismometer.wdgt"
 xcode_proj = "plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj/"
 
@@ -62,5 +63,12 @@ task :generate_site do
   
   string_replace('GENERATED_CONTENT', html_str, 'gh-pages/index.html')
     
+end
+
+task :package_bundle do
+  sh "mkdir UnimotionPlugin.bundle"
+  sh "cp -R plugin/UnimotionPlugin/build/Release/UnimotionPlugin.bundle/* UnimotionPlugin.bundle"
+  sh "tar -czvf UnimotionPlugin.bundle.#{VERSION_NUMBER}.tgz UnimotionPlugin.bundle/*"
+  sh "rm -rdf UnimotionPlugin.bundle"
 end
 
