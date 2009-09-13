@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB" lang="en-GB">
+	<head profile="http://dublincore.org/documents/dcq-html/">
+
+		<title>UnimotionPlugin - An Apple Dashboard widget plugin to read your Macbook's, Powerbook's or iBook's sudden motion sensor</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="description" content="Breaking news, sport, TV, radio and a whole lot more. The BBC informs, educates and entertains - wherever you are, whatever your age." />
+		<meta name="keywords" content="BBC, bbc.co.uk, Search, British Broadcasting Corporation, BBC iPlayer, BBCi" />
+
+		<link type="text/css" rel="stylesheet" media="screen" href="./css/style.css" />
+
+	</head>
+
+	<body>
+		<div id="content">
+			
+			<!-- Start generated content -->
+			
+<h1>UnimotionPlugin - Apple Mac OS X Dashboard widget plugin to read sudden motion sensors</h1>
+<h2>About</h2>
+<p>
+UnimotionPlugin is an Apple Mac OS X Dashboard widget plugin for reading
+the sudden motion sensors found on Macbook Pros, Macbooks, Powerbooks and
+iBooks. It is based on the excellent Unimotion C library by Lincoln Ramsay,
+hosted at <a
+href="http://unimotion.sourceforge.net">unimotion.sourceforge.net</a>
+</p>
+<p>
+UnimotionPlugin allows you to read data from the Sudden Motion Sensor found
+it Apple Mac laptops. This sensor can measure the orientation and movement
+of your laptop. Dashboard widget developers are now easily able to read the
+SMS data via javascript to build widgets that have an awareness of an Apple
+laptops orientation and movement.
+</p>
+<h2>Building from source</h2>
+<p>
+The project is hosted on Github <a
+href="http://github.com/matth/UnimotionPlugin">github.com/matth/UnimotionPlugin</a>
+To build from source you will need Xcode installed.
+</p>
+<ol>
+<li>Clone the git repo
+
+<pre>
+     git clone git://github.com/matth/UnimotionPlugin.git
+</pre>
+</li>
+<li>Open the Xcode project and build
+
+<pre>
+     open plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj
+</pre>
+</li>
+<li>If you have rake installed then a Rakefile has been setup to aid
+compilation.
+
+<pre>
+     rake build_plugin # Builds the UnimotionPlugin.bundle
+     rake build_wdgt   # Builds the example Seismometer widget
+</pre>
+</li>
+</ol>
+<h2>Example Widget: Seismometer</h2>
+<p>
+The example application is an imitation seismometer, it plots movement on
+the X, Y and Z axis using data from the Unimotion plugin. This is
+demonstrates a simple use of the plugin, it could also be used to control
+games, sounds, etc.
+</p>
+<h2>Installation</h2>
+<p>
+Follow these instructions to use the widget plugin within your own
+dashboard widgets.
+</p>
+<ol>
+<li>Firstly copy the directory UnimotionPlugin.bundle into your widget&#8217;s
+root directory.
+
+</li>
+<li>Once in place you must reference this in your widget&#8217;s Info.plist
+file so it gets loaded in correctly.
+
+</li>
+<li>Add the following keys to your Info.plist:
+
+<pre>
+     &lt;key&gt;Plugin&lt;/key&gt;
+     &lt;string&gt;UnimotionPlugin.bundle&lt;/string&gt;
+</pre>
+</li>
+<li>The plugin should now be loaded into your widget, the following statement
+should return true.
+
+<pre>
+     if (typeof UnimotionPlugin != 'undefined')
+</pre>
+</li>
+</ol>
+<p>
+You can now use the plugin&#8217;s API from your javascript code
+</p>
+<h2>The Javascript API</h2>
+<h3>UnimotionPlugin.detectSms()</h3>
+<p>
+This will return an integer representing the sudden motion sensor hardware
+found.
+</p>
+<pre>
+        Return values :
+
+        0 = No hardware found
+        1 = Powerbook
+        2 = iBook
+        3 = High Res. Powerbook
+        4 = Macbook / Macbook Pro
+</pre>
+<h3>UnimotionPlugin.refreshData()</h3>
+<p>
+This will refresh the readings from the sudden motion sensor
+</p>
+<h3>UnimotionPlugin.readX()</h3>
+<p>
+Returns a floating point number representing the last reading from the X
+axis
+</p>
+<h3>UnimotionPlugin.readY()</h3>
+<p>
+Returns a floating point number representing the last reading from the Y
+axis
+</p>
+<h3>UnimotionPlugin.readZ()</h3>
+<p>
+Returns a floating point number representing the last reading from the Z
+axis
+</p>
+<h2>Developing your widget in a browser</h2>
+<p>
+It&#8217;s often preferable to develop your widget in the browser, in this
+situation the plugin shall not be available. The below code set&#8217;s up
+a &#8216;mock&#8217; representation of the plugin so you can continue
+development in the browser.
+</p>
+<pre>
+        // For browser testing, where UnimotionPlugin doesn't exist
+        if (typeof widget == 'undefined') {
+
+                var UnimotionPlugin = function() {
+
+                        function randomNum() {
+                                var num = Math.random();
+                                if (Math.random() &gt; 0.5) {
+                                        num = num * -1;
+                                }
+                                return num;
+                        }
+
+                        return {
+                                'refreshData' : function() {},
+                                'readX' : randomNum,
+                                'readY' : randomNum,
+                                'readZ' : randomNum,
+                                'detectSms' : function() {
+                                        return 4; // Hardware you want to represent
+                                }
+                        }
+
+                }();
+
+        }
+</pre>
+<h2>UnimotionPlugin License</h2>
+<p>
+(GPLv3)
+</p>
+<p>
+Copyright (C) 2009 Matt Haynes
+</p>
+<p>
+This program is free software: you can redistribute it and/or modify it
+under the terms of the GNU General Public License as published by the Free
+Software Foundation, either version 3 of the License, or (at your option)
+any later version.
+</p>
+<p>
+This program is distributed in the hope that it will be useful, but WITHOUT
+ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for
+more details.
+</p>
+<p>
+You should have received a copy of the GNU General Public License along
+with this program. If not, see <a
+href="http://www.gnu.org/licenses">www.gnu.org/licenses</a>/
+</p>
+<h2>Unimotion C libraries License</h2>
+<p>
+Please see plugin/UnimotionPlugin/unimotion/LGPL.txt
+</p>
+
+
+			<!-- End generated content -->
+			
+		</div>
+	
+		<ul id="links">
+			<li><a href="http://matthaynes.net/blog/">developers blog</a></li>
+			<li><a href="http://wiki.github.com/matth/UnimotionPlugin">wiki</a></li>
+			<li><a href="http://github.com/matth/UnimotionPlugin/issues">bugs</a></li>
+			<li><a href="http://github.com/matth/UnimotionPlugin/">git</a></li>						
+		</ul>
+		
+		<h2 id="forkme"><a href="http://github.com/matth/UnimotionPlugin"><span>Fork me on Github</span></a></h2>
+	</body>
+	
+</html>

@@ -1,47 +1,53 @@
-= Unimotion Dashboard Widget Plugin
+= UnimotionPlugin - Apple Mac OS X Dashboard widget plugin to read sudden motion sensors
 
-This is a dashboard widget plugin wrapper for the excellent Unimotion C library by Lincoln Ramsay, http://unimotion.sourceforge.net 
+== About 
 
-Unimotion allows you to read data from the Sudden Motion Sensor found it Apple Mac laptops. This plugin allows widget developers to read SMS data via javascript and build applications that have an awareness of an Apple laptops orientaton and movement.
+UnimotionPlugin is an Apple Mac OS X Dashboard widget plugin for reading the sudden motion sensors found on Macbook Pros, Macbooks, Powerbooks and iBooks. It is based on the excellent Unimotion C library by Lincoln Ramsay, hosted at http://unimotion.sourceforge.net 
 
-== Example: Seismometer 
-
-The example application is an imitation seismometer, it plots movement on the X, Y and Z axis using data from the Unimotion plugin. This is demonstrates a simple use of the plugin, it could also be used to control games, sounds, etc.
+UnimotionPlugin allows you to read data from the Sudden Motion Sensor found it Apple Mac laptops. This sensor can measure the orientation and movement of your laptop. Dashboard widget developers are now easily able to read the SMS data via javascript to build widgets that have an awareness of an Apple laptops orientation and movement.
 
 == Building from source
 
-To build from source you will need Xcode installed. You can open the below project and build from there:
+The project is hosted on Github http://github.com/matth/UnimotionPlugin To build from source you will need Xcode installed.
 
-	plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj
+1. Clone the git repo
 
-If you have rake installed then a Rakefile has been setup to aid compilation. 
+	git clone git://github.com/matth/UnimotionPlugin.git
+	
+2. Open the Xcode project and build
+	
+	open plugin/UnimotionPlugin/UnimotionPlugin.xcodeproj
+	
+3. If you have rake installed then a Rakefile has been setup to aid compilation. 
 
 	rake build_plugin # Builds the UnimotionPlugin.bundle
-	rake build_wdgt  # Builds the example Seismometer widget
+	rake build_wdgt   # Builds the example Seismometer widget
 
-== Using the widget plugin
+== Example Widget: Seismometer 
+
+The example application is an imitation seismometer, it plots movement on the X, Y and Z axis using data from the Unimotion plugin. This is demonstrates a simple use of the plugin, it could also be used to control games, sounds, etc.
+
+
+== Installation
 
 Follow these instructions to use the widget plugin within your own dashboard widgets.
 
-Firstly copy the directory UnimotionPlugin.bundle into your widget's root directory. 
-
-Once in place you must reference this in your widget's Info.plist file so it gets loaded in correctly. 
-
-Add the following keys to your Info.plist:
+1. Firstly copy the directory UnimotionPlugin.bundle into your widget's root directory. 
+2. Once in place you must reference this in your widget's Info.plist file so it gets loaded in correctly. 
+3. Add the following keys to your Info.plist:
 
 	<key>Plugin</key>
 	<string>UnimotionPlugin.bundle</string> 
 	
-The plugin should now be loaded into your widget, the following statement should return true.
+4. The plugin should now be loaded into your widget, the following statement should return true.
 
 	if (typeof UnimotionPlugin != 'undefined') 
 	
 You can now use the plugin's API from your javascript code
 
-=== The API
+== The Javascript API
 
-
-==== UnimotionPlugin.detectSms()
+=== UnimotionPlugin.detectSms()
 
 This will return an integer representing the sudden motion sensor hardware found.
 
@@ -54,19 +60,19 @@ This will return an integer representing the sudden motion sensor hardware found
 	4 = Macbook / Macbook Pro
 
 
-==== UnimotionPlugin.refreshData();
+=== UnimotionPlugin.refreshData()
 
 This will refresh the readings from the sudden motion sensor
 
-==== UnimotionPlugin.readX()
+=== UnimotionPlugin.readX()
 
 Returns a floating point number representing the last reading from the X axis 
 
-==== UnimotionPlugin.readY()
+=== UnimotionPlugin.readY()
 
 Returns a floating point number representing the last reading from the Y axis
 
-==== UnimotionPlugin.readZ()
+=== UnimotionPlugin.readZ()
 
 Returns a floating point number representing the last reading from the Z axis
 
@@ -93,7 +99,7 @@ It's often preferable to develop your widget in the browser, in this situation t
 				'readY' : randomNum,
 				'readZ' : randomNum,
 				'detectSms' : function() {
-					return 4; // or whatever hardware you want to represent
+					return 4; // Hardware you want to represent
 				}
 			}
 
@@ -102,9 +108,7 @@ It's often preferable to develop your widget in the browser, in this situation t
 	}
 
 
-== License:
-
-=== The Unimotion Dashboard widget plugin and all examples are licensed under GPLv3
+== UnimotionPlugin License
 
 (GPLv3)
 
@@ -121,8 +125,8 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 
 You should have received a copy of the GNU General Public License
-along with this program.  If not, see <http://www.gnu.org/licenses/>
+along with this program.  If not, see http://www.gnu.org/licenses/
 
-=== Unimotion C libraries are licensed under LGPL 2.1
+== Unimotion C libraries License
 
 Please see plugin/UnimotionPlugin/unimotion/LGPL.txt 
