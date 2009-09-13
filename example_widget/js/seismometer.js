@@ -26,7 +26,7 @@ var Seismometer = function() {
 	function drawGraph() {
 		// Clear
 		ctx.clearRect(0,0,width,height);
-		
+
 		ctx.strokeStyle = "#036";
 		ctx.lineWidth =  1;
 		ctx.beginPath();
@@ -42,7 +42,7 @@ var Seismometer = function() {
 		if (img2_pos >= 164) img2_pos = -164;		
 		
 		data.each(function(item, index) {
-			ctx.lineTo(140 + (80 * (-1 * item)), 0 + (index));
+			ctx.lineTo(140 + (60 * (-1 * item)), 0 + (index));
 		});
 		ctx.stroke();
 	}
