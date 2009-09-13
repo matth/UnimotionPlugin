@@ -35,7 +35,8 @@ end
 
 task :generate_site do
 
-  sh 'rm -rdf gh_pages/*'
+  sh 'mkdir gh-pages'
+  sh 'rm -rdf gh-pages/*'
   sh 'cp -R site_templates/* gh-pages/'
 
   require 'rubygems'
